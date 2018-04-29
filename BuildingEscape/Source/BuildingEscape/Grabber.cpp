@@ -44,6 +44,8 @@ void UGrabber::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("InputComponent found for %s!"), *GetOwner()->GetName())
 			// Bind the input actions
 			InputComponent->BindAction("Grab", IE_Pressed, this, &UGrabber::Grab);
+			InputComponent->BindAction("Grab", IE_Released, this, &UGrabber::Release);
+
 	}
 	else
 	{
@@ -109,4 +111,11 @@ void UGrabber::Grab()
 	UE_LOG(LogTemp, Warning, TEXT("Grab pressed"));
 
 }
+
+void UGrabber::Release()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Released!"));
+
+}
+
 

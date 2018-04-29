@@ -35,4 +35,8 @@ private:
 	
 	// Ray-cast and grab what is in reach
 	void Grab();
+
+	// Releawse held item if holding item
+	void Release();
+
 };
