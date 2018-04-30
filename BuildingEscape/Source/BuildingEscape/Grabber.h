@@ -30,6 +30,12 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	// Returns current start of reach line
+	FVector GetReachLineStart();
+
+	// Returns current end of reach line
+	FVector GetReachLineEnd();
+
 	FHitResult GetFirstPhysicsBodyInReach();
 
 private:
