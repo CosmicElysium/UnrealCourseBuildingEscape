@@ -30,7 +30,7 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	void GetFirstPhysicsBodyInReach();
+	FHitResult GetFirstPhysicsBodyInReach();
 
 private:
 	// How far grabber can reach in cm
