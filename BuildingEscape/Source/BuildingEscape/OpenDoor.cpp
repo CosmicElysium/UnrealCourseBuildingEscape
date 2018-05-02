@@ -62,7 +62,7 @@ float UOpenDoor::GetTotalMassOfActorsOnPlate()
 	PressurePlate->GetOverlappingActors(OUT OverlappingActors);
 
 	// Iterate through them adding their masses
-	for (auto& Actor : OverlappingActors)
+	for (const auto& Actor : OverlappingActors)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("%s added to Pressure Plate!"), *Actor->GetName())
 
